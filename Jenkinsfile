@@ -4,6 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'docker'
+                bat 'docker pull python'
             }
         }
         }
