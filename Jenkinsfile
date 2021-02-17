@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-        bat 'docker'
-        bat 'C:\Users\ADMIN\AppData\Local\Programs\Python\Python39\python.exe calc.py'
+        bat 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
        
