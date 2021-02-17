@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
         bat 'docker'
-        bat 'python'
+        bat 'C:\Users\ADMIN\AppData\Local\Programs\Python\Python39\python.exe calc.py'
             }
         }
        
