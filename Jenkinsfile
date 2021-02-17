@@ -1,9 +1,15 @@
 pipeline {
-    agent any
+    agent none
     stages {
         stage('Build') {
-            steps { bat 'docker'}
+            agent {
+                docker {
+                    image 'python:3.9.1'
+                }
+            }
+            steps {
+                bat 'python -m py_compile sources/add2vals.py sources/calc.py'
+            }
         }
-       
         }
     }
