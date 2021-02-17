@@ -1,9 +1,9 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage('Build') {
             steps {
-                bat 'docker'
+        bat 'docker'
             }
         }
        
