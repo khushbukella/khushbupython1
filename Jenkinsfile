@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'docker'
                 bat 'docker pull python'
+                bat 'python -m py_compile sources/add2vals.py sources/calc.py'
             }
         }
         }
