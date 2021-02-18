@@ -12,7 +12,7 @@ pipeline {
             
             steps {
                 withAWS(credentials:'khushbu'){
-            bat "aws cloudformation create-stack --stack-name khushbustackforcicdd --template-body file://cicd1.json --capabilities CAPABILITY_NAMED_IAM"}
+            bat "aws cloudformation create-stack --stack-name khushbustackforcicddd --template-body file://cicd1.json --capabilities CAPABILITY_NAMED_IAM"}
               }
             
              }
