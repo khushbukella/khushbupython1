@@ -11,7 +11,7 @@ pipeline {
         stage('Submit Stack') {
             
             steps {
-                withAWS(credentials:'jenkins'){
+                withAWS(credentials:'khushbu'){
             bat "aws cloudformation create-stack --stack-name khushbustackforcicdd --template-body file://cicd1.json --capabilities CAPABILITY_NAMED_IAM"}
               }
             
