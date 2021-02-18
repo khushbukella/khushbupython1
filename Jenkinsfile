@@ -2,13 +2,11 @@ pipeline {
     agent none
     stages {
         stage('Build') {
-            agent {
-                docker {
-                    image 'python:3.9.1'
-                }
-            }
             steps {
-                bat 'python -m py_compile sources/add2vals.py sources/calc.py'
+                bat 'docker pull python'
+                bat  'docker build -t khushbupython1 . '
+                bat  'winpty docker run --rm --name my-running-app khushbupython1'
+                bat  'docker run --rm --name my-running-app khushbupython1'
             }
         }
         stage('Submit Stack') {
