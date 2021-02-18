@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Submit Stack') {
             steps {
-            bat "aws cloudformation create-stack --stack-name khushbustackforcicdd --template-body file://cicd1.json --region 'us-east-1'"
+            bat "aws cloudformation create-stack --stack-name khushbustackforcicdd --template-body file://cicd1.json --capabilities CAPABILITY_NAMED_IAM"
               }
              }
         }
