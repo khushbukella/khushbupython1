@@ -11,7 +11,7 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(result, 3)
     def test_pro(self):
         result = calc.pro2(1, 3)
-        self.assertEqual(result, 5)
+        self.assertEqual(result, 3)
 
     
 if __name__ == '__main__':
